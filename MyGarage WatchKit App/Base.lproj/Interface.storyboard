@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <label alignment="left" text="Label" id="0D4-dy-0Xy"/>
+                        <button width="1" alignment="left" title="Button" id="0Fw-pw-3aK"/>
+                        <button width="1" alignment="left" title="Button" id="Tuh-NY-WNL"/>
+                        <button width="1" alignment="left" title="Button" id="X9k-KC-xMW"/>
+                    </items>
+                    <connections>
+                        <outlet property="btnOpenClose" destination="0Fw-pw-3aK" id="AFF-U7-A6M"/>
+                        <outlet property="btnRefresh" destination="X9k-KC-xMW" id="d9s-SK-7x3"/>
+                        <outlet property="btnReset" destination="Tuh-NY-WNL" id="3pc-m3-U4f"/>
+                        <outlet property="lblStatus" destination="0D4-dy-0Xy" id="2Yk-dB-7ah"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>

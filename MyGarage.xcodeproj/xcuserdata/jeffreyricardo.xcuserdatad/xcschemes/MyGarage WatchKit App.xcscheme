@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "0630"
+   version = "1.3">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "64F0BCB71B2F9DB5000559A1"
+               BuildableName = "MyGarage WatchKit App.app"
+               BlueprintName = "MyGarage WatchKit App"
+               ReferencedContainer = "container:MyGarage.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "64F0BC7F1B2F9DA4000559A1"
+               BuildableName = "MyGarage.app"
+               BlueprintName = "MyGarage"
+               ReferencedContainer = "container:MyGarage.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "64F0BCAC1B2F9DB5000559A1"
+               BuildableName = "MyGarage WatchKit Extension.appex"
+               BlueprintName = "MyGarage WatchKit Extension"
+               ReferencedContainer = "container:MyGarage.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      buildConfiguration = "Debug">
+      <Testables>
+      </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "64F0BCB71B2F9DB5000559A1"
+            BuildableName = "MyGarage WatchKit App.app"
+            BlueprintName = "MyGarage WatchKit App"
+            ReferencedContainer = "container:MyGarage.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+   </TestAction>
+   <LaunchAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      allowLocationSimulation = "YES">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/MyGarage">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "64F0BCB71B2F9DB5000559A1"
+            BuildableName = "MyGarage WatchKit App.app"
+            BlueprintName = "MyGarage WatchKit App"
+            ReferencedContainer = "container:MyGarage.xcodeproj">
+         </BuildableReference>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "64F0BCB71B2F9DB5000559A1"
+            BuildableName = "MyGarage WatchKit App.app"
+            BlueprintName = "MyGarage WatchKit App"
+            ReferencedContainer = "container:MyGarage.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Release"
+      debugDocumentVersioning = "YES">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard"
+         RemotePath = "/MyGarage">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "64F0BCB71B2F9DB5000559A1"
+            BuildableName = "MyGarage WatchKit App.app"
+            BlueprintName = "MyGarage WatchKit App"
+            ReferencedContainer = "container:MyGarage.xcodeproj">
+         </BuildableReference>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "64F0BCB71B2F9DB5000559A1"
+            BuildableName = "MyGarage WatchKit App.app"
+            BlueprintName = "MyGarage WatchKit App"
+            ReferencedContainer = "container:MyGarage.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>
