@@ -11,6 +11,11 @@
 @interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIWebView *camWebView;
+@property (weak, nonatomic) IBOutlet UILabel *lblStatus;
+
+@property (weak, nonatomic) IBOutlet UIButton *btnOpenClose;
+@property (weak, nonatomic) IBOutlet UIButton *btnRefresh;
+@property (weak, nonatomic) IBOutlet UIButton *btnReset;
 
 @end
 

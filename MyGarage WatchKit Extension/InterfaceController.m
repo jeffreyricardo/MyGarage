@@ -16,6 +16,11 @@
 NSURLSession *session = nil;
 NSMutableData *receivedData = nil;
 NSString *responseStr = nil;
+NSString *username = @"";
+NSString *password = @"";
+NSString *serverAddress = @"";
+NSString *camPort = @"8081";
+NSString *webiopiPort = @"8000";
 
 @implementation InterfaceController
 
@@ -44,10 +49,12 @@ NSString *responseStr = nil;
 - (void)checkSensorValue
 {
     
-    NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://jeffreyricardo.dyndns.org:1234/GPIO/22/value"]];
+    NSString *urlString = [NSString stringWithFormat:@"%@:%@%@", serverAddress, webiopiPort, @"/GPIO/22/value"];
+    
+    NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlString]];
     
     [req setHTTPMethod:@"GET"];
-    NSString *authStr = @"user:password";
+    NSString *authStr = [NSString stringWithFormat:@"%@:%@", username, password];
     NSData *authData = [authStr dataUsingEncoding:NSUTF8StringEncoding];
     NSString *authValue = [NSString stringWithFormat: @"Basic %@",[authData base64EncodedStringWithOptions:0]];
     [req setValue:authValue forHTTPHeaderField:@"Authorization"];
@@ -104,17 +111,39 @@ NSString *responseStr = nil;
 
 - (void)sendHighToPi
 {
-    NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://jeffreyricardo.dyndns.org:1234/GPIO/23/value/1"]];
+    NSLog(@"Sending HIGH to Pi");
+    
+    NSString *urlString = [NSString stringWithFormat:@"%@:%@%@", serverAddress, webiopiPort, @"/GPIO/23/value/1"];
+    
+    NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlString]];
     
     [req setHTTPMethod:@"POST"];
-    NSString *authStr = @"user:password";
+    NSString *authStr = [NSString stringWithFormat:@"%@:%@", username, password];
     NSData *authData = [authStr dataUsingEncoding:NSUTF8StringEncoding];
     NSString *authValue = [NSString stringWithFormat: @"Basic %@",[authData base64EncodedStringWithOptions:0]];
     [req setValue:authValue forHTTPHeaderField:@"Authorization"];
     
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:req completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         
-        responseStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        if (error == nil)
+        {
+            responseStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            NSLog(@"Response is: %@", responseStr);
+            
+            if ([responseStr intValue] == 0)
+            {
+                NSLog(@"Garage is CLOSED");
+
+            }
+            if ([responseStr intValue] == 1)
+            {
+                NSLog(@"Garage is OPEN");
+            }
+        }
+        else
+        {
+            NSLog(@"ERROR %@", [error description]);
+        }
     }];
     
     [dataTask resume];
@@ -122,15 +151,40 @@ NSString *responseStr = nil;
 
 - (void)sendLowToPi
 {
-    NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://jeffreyricardo.dyndns.org:1234/GPIO/23/value/0"]];
+    NSLog(@"Sending LOW to Pi");
+    
+    NSString *urlString = [NSString stringWithFormat:@"%@:%@%@", serverAddress, webiopiPort, @"/GPIO/23/value/0"];
+    
+    NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlString]];
     
     [req setHTTPMethod:@"POST"];
-    NSString *authStr = @"user:password";
+    NSString *authStr = [NSString stringWithFormat:@"%@:%@", username, password];
     NSData *authData = [authStr dataUsingEncoding:NSUTF8StringEncoding];
     NSString *authValue = [NSString stringWithFormat: @"Basic %@",[authData base64EncodedStringWithOptions:0]];
     [req setValue:authValue forHTTPHeaderField:@"Authorization"];
     
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:req completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        
+        if (error == nil)
+        {
+            responseStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            NSLog(@"Response is: %@", responseStr);
+            
+            if ([responseStr intValue] == 0)
+            {
+                NSLog(@"Garage is CLOSED");
+
+            }
+            if ([responseStr intValue] == 1)
+            {
+                NSLog(@"Garage is OPEN");
+
+            }
+        }
+        else
+        {
+            NSLog(@"ERROR %@", [error description]);
+        }
     }];
     
     [dataTask resume];

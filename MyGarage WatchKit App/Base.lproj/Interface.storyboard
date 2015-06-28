@@ -10,10 +10,22 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <label alignment="left" text="Label" id="0D4-dy-0Xy"/>
-                        <button width="1" alignment="left" title="Button" id="0Fw-pw-3aK"/>
-                        <button width="1" alignment="left" title="Button" id="Tuh-NY-WNL"/>
-                        <button width="1" alignment="left" title="Button" id="X9k-KC-xMW"/>
+                        <label alignment="left" text="Status" id="0D4-dy-0Xy"/>
+                        <button width="1" alignment="left" title="Open/Close" id="0Fw-pw-3aK">
+                            <connections>
+                                <action selector="openClose:" destination="AgC-eL-Hgc" id="KOJ-Q4-Nu0"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Reset" id="Tuh-NY-WNL">
+                            <connections>
+                                <action selector="resetGpio" destination="AgC-eL-Hgc" id="EZ7-IS-jJQ"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Refresh" id="X9k-KC-xMW">
+                            <connections>
+                                <action selector="refreshUI" destination="AgC-eL-Hgc" id="R7X-zC-PJn"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="btnOpenClose" destination="0Fw-pw-3aK" id="AFF-U7-A6M"/>

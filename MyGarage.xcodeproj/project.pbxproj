@@ -650,6 +650,7 @@
 				64F0BCA51B2F9DA4000559A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		64F0BCA61B2F9DA4000559A1 /* Build configuration list for PBXNativeTarget "MyGarageTests" */ = {
 			isa = XCConfigurationList;
@@ -658,6 +659,7 @@
 				64F0BCA81B2F9DA4000559A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		64F0BCC71B2F9DB5000559A1 /* Build configuration list for PBXNativeTarget "MyGarage WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -666,6 +668,7 @@
 				64F0BCC91B2F9DB5000559A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		64F0BCCA1B2F9DB5000559A1 /* Build configuration list for PBXNativeTarget "MyGarage WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -674,6 +677,7 @@
 				64F0BCCC1B2F9DB5000559A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
